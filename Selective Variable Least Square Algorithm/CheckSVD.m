@@ -1,7 +1,7 @@
 function [V_obs D_obs] = CheckSVD(V,D)
 %CHECKSVD 이 함수의 요약 설명 위치
 %   자세한 설명 위치
-SV_max = 100;
+SV_max = 50;
 Lambda = [D(1,1);D(2,2);D(3,3)];
 Lambda_max = max(Lambda);
 SV1 = sqrt(abs(Lambda_max/Lambda(1)));

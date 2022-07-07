@@ -305,7 +305,6 @@ x_off_hat_vec(end)
 LSxx = inv(W_xx)*b_xx
 LSyy = inv(W_yy)*b_yy
 
-
 % Simple Least Square Method
 figure()
 subplot(2,2,1)
@@ -317,18 +316,17 @@ grid on;
 
 subplot(2,2,2)
 plot(t(1:end-4),L_yy_vec(1,:))
-title('$\hat{J}_{yy}-t$','Interpreter','latex')
-xlabel('t (s)')
-ylabel('$\hat{J}_{yy} (kg \cdot m^2)$','Interpreter','latex')
-grid on
-
-subplot(2,2,3)
-plot(t(1:end-4),L_xx_vec(3,:))
 title('$\hat{y}_{CG \rightarrow COM}-t$','Interpreter','latex')
 xlabel('t (s)')
 ylabel('$\hat{y}_{CG \rightarrow COM}(m)$','Interpreter','latex')
 grid on;
 
+subplot(2,2,3)
+plot(t(1:end-4),L_xx_vec(3,:))
+title('$\hat{J}_{yy}-t$','Interpreter','latex')
+xlabel('t (s)')
+ylabel('$\hat{J}_{yy} (kg \cdot m^2)$','Interpreter','latex')
+grid on
 
 subplot(2,2,4)
 plot(t(1:end-4),L_yy_vec(3,:))
